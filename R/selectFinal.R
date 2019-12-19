@@ -166,7 +166,6 @@ select <- function(dataset, criterion = AIC, model = lm, generation = 20, size =
 
   stopifnot(!is.null(dataset))
   stopifnot(size%%2 == 0)
-  stopifnot(is.count(generation))
   stopifnot(size >= (ncol(dataset) - 1))
 
   individualMatrix <- initialization(dataset, size)
