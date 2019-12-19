@@ -1,4 +1,4 @@
-
+usethis::use_package("assertthat")
 
 #Customizable parameters of out fitness function
 f <- AIC         # Default: AIC for fitness function
@@ -166,7 +166,12 @@ reproduction <- function(parentMatrix) {
 #'
 select <- function(dataset, criterion = AIC, model = lm, generation = 20, size = 50){
 
-  
+  assert_that(!is.null(dataset), msg = "Please enter a dataset")
+  assert_that(is.count(size), msg = "Please enter a positive integer for the population size")
+  assert_that(size%%2 == 0, msg = "Please enter an even number for population size")
+  assert_that(is.count(generation), msg = "Please enter a positive integer for the number of generations")
+  assert_that(size >= ncol(dataset) - 1, msg = "Please make sure the popoulation size is larger than the number of predictors")
+
   individualMatrix <- initialization(dataset, size)
 
   for(i in 1:generation) {
