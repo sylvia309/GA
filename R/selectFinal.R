@@ -167,7 +167,6 @@ reproduction <- function(parentMatrix) {
 select <- function(dataset, criterion = AIC, model = lm, generation = 20, size = 50){
 
   assertthat::assert_that(!is.null(dataset), msg = "Please enter a dataset")
-  assertthat::assert_that(is.count(size), msg = "Please enter a positive integer for the population size")
   assertthat::assert_that(size%%2 == 0, msg = "Please enter an even number for population size")
   assertthat::assert_that(is.count(generation), msg = "Please enter a positive integer for the number of generations")
   assertthat::assert_that(size >= ncol(dataset) - 1, msg = "Please make sure the popoulation size is larger than the number of predictors")
