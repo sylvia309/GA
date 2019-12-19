@@ -5,13 +5,17 @@ To see more detailed information about the main function`select()`please use `?s
 ## Prerequisite Packages
 
 `roxygen2`
+
 `devtools`
+
 `testthat`
 
 ## Installing GA Package
 
 `install.packages("devtools")`
+
 `library(devtools)`
+
 `install_github(paste0("sylvia309", '/GA'))`
 
 ## Running Tests
