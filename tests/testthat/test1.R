@@ -6,7 +6,7 @@
 #               2. Handles problematic cases inputed by user and
 #               stochasic components of the algorithm
 usethis::use_package("testthat")
-source("../R/selectFinal.R", chdir = TRUE)
+#source("../R/selectFinal.R", chdir = TRUE)
 
 #library(testthat)
 
