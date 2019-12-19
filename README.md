@@ -22,7 +22,7 @@ Before running tests, ensure your working directory is in the upper folder of GA
 
 Once you are in the folder above:
 
-`devtools::test('GA')
+`devtools::test('GA')`
 
 ## Authors
 
